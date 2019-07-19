@@ -10,8 +10,15 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+//app.set('view engine', 'jade');
+
+var mustacheExpress = require('mustache-express');
+
+// Register '.mustache' extension with The Mustache Express
+app.engine('html', mustacheExpress());
+
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -28,7 +35,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+/*app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -36,6 +43,9 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});*/
+var port = 8000;
+app.listen(port, () => {
+  console.log("Port in "+ port);
 });
-
 module.exports = app;

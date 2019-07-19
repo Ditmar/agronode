@@ -1,0 +1,101 @@
+/*fonts para el blog*/
+@import url(https://fonts.googleapis.com/css?family=Croissant+One);
+.croidsant{
+	font-family: 'Croidsant One', cursive;
+}
+.white{
+	color: white;
+}
+.blue{
+	color: #15ACD1;
+}
+/*estilo para la barra de navigacion*/
+
+/*estilo del blog*/
+header{
+	background-image: url("../img/blog.jpg");
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.blur{
+	min-height: inherit;
+	background-color: rgba(0,0,0,.5);
+}
+section{
+	height: auto;
+	padding-top: 30px;
+}
+footer{
+	background-color: #303030;
+	min-height: 150px;
+	border-top:3px solid #404040;
+	padding-top: 2%;
+	color:white;
+}
+#title{
+	font-size: 6em;
+	color: white;
+	text-align: center;
+	padding-top: 10%;
+}
+#subtitle{
+	font-size: 3em;
+	color:white;
+	text-align: center;
+	margin-top:2% ;
+}
+
+.btn-web{
+	background-color: transparent;
+	border: 1px solid white;
+	color:white;
+	margin-top:1%;
+	-webkit-transition: background-color .5s, border .5s;
+	-moz-transition:background-color .5s, border .5s;
+	-o-transition:background-color .5s, border .5s;
+}
+.btn-web:hover{
+	background-color: white;
+	border: 5px solid white;
+	color: tomato;
+	-webkit-transition: background-color .5s, border .5s;
+	-moz-transition:background-color .5s, border .5s;
+	-o-transition:background-color .5s, border .5s;
+	cursor: pointer;
+}
+
+/* media queris para blog*/
+@media(max-width: 350px){
+header{
+	background-image: url("../img/blog.jpg");
+	min-height: 50vh;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+#title{
+		font-size: 2em;
+		color: white;
+		text-align: center;
+		padding-top: 10%;
+	}
+#subtitle{
+		font-size: 1em;
+		color:white;
+		text-align: center;
+		margin-top:2.5% ;
+	}
+	footer{
+		background-color: #009E66;
+		min-height: 150px
+	}
+}
+
+#table
+{
+	
+	font-size:10px;
+}	
