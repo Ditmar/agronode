@@ -79,7 +79,9 @@ window.__mirage2 = {petok:"0cf66fd8be4f5248e8d4b68d4f98a3657b662ad2-1537327471-1
                 <li class="nav-item">
                     <a class="nav-link " section="#cron" href="#">Cronograma</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link " target="_blank" href="assets/files/LISTADO_RESUMENES_CONGRESO_CIIABO_2019.pdf">Listado de Resumenes</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link " section="#contact" href="#">Contacto</a>
                 </li>
@@ -885,6 +887,12 @@ window.__mirage2 = {petok:"0cf66fd8be4f5248e8d4b68d4f98a3657b662ad2-1537327471-1
             <div class="brand_item text-center">
                 <img data-cfsrc="/assets/img/brands/b3.png" alt="brand" style="display:none;visibility:hidden;"><noscript><img src="assets/img/brands/b3.png" alt="brand"></noscript>
             </div>
+            <div class="brand_item text-center">
+                <img data-cfsrc="/assets/img/brands/b4.jpg" alt="brand" style="display:none;visibility:hidden;"><noscript><img src="assets/img/brands/b4.jpg" alt="brand"></noscript>
+            </div>
+            <div class="brand_item text-center">
+                <img data-cfsrc="/assets/img/brands/b5.jpg" alt="brand" style="display:none;visibility:hidden;"><noscript><img src="assets/img/brands/b5.jpg" alt="brand"></noscript>
+            </div>
         </div>
     </div>
 </section>
@@ -927,21 +935,11 @@ window.__mirage2 = {petok:"0cf66fd8be4f5248e8d4b68d4f98a3657b662ad2-1537327471-1
                     <div class="footer_box_body">
 
                         <ul class="footer_social">
+
                             <li>
-                                <a href=""><i class="ion-social-pinterest"></i></a>
+                                <a href="https://www.facebook.com/congresoagroindustrial/"><i class="ion-social-facebook"></i></a>
                             </li>
-                            <li>
-                                <a href=""><i class="ion-social-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href=""><i class="ion-social-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href=""><i class="ion-social-dribbble"></i></a>
-                            </li>
-                            <li>
-                                <a href=""><i class="ion-social-instagram"></i></a>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -990,7 +988,6 @@ window.__mirage2 = {petok:"0cf66fd8be4f5248e8d4b68d4f98a3657b662ad2-1537327471-1
                     </div>
                 </div>
             </div>
-
             <div class="col-12 col-md-4">
                 <div class="footer_box">
                     <div class="footer_header">
@@ -1075,9 +1072,10 @@ window.__mirage2 = {petok:"0cf66fd8be4f5248e8d4b68d4f98a3657b662ad2-1537327471-1
 $(document).ready(() => {
   console.log("Load page");
   $("#headernav ul li a").click(function (e) {
-    console.log($(this).attr("section"));
-    e.preventDefault();
-    $($(this).attr("section")).animatescroll({scrollSpeed:1000, padding:120});
+    if (e.target.href.match(/LISTADO/g) == null) {
+      e.preventDefault();
+      $($(this).attr("section")).animatescroll({scrollSpeed:1000, padding:120});
+    }
   });
   $("#btn_inscribete").click(function (e) {
     e.preventDefault();
@@ -1086,7 +1084,5 @@ $(document).ready(() => {
   });
 });
 </script>
-
-
 </body>
 </html>
