@@ -1,0 +1,185 @@
+<!--get tickets section end-->
+
+<!--footer start -->
+<footer id="contact">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-md-4 col-12">
+                <div class="footer_box">
+                    <div class="footer_header">
+                        <div class="footer_logo">
+                            <img data-cfsrc="/assets/img/logo.png" alt="evento" style="display:none;visibility:hidden;"><noscript>
+                              <img src="assets/img/logo.png" alt="evento"></noscript>
+                        </div>
+                    </div>
+                    <div class="footer_box_body">
+
+                        <ul class="footer_social">
+
+                            <li>
+                                <a href="https://www.facebook.com/congresoagroindustrial/"><i class="ion-social-facebook"></i></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="footer_box">
+                    <div class="footer_header">
+                        <h4 class="footer_title">
+                            instagram
+                        </h4>
+                    </div>
+                    <div class="footer_box_body">
+                        <ul class="instagram_list">
+                            <li>
+                                <a href="#">
+                                    <img data-cfsrc="/assets/img/cleander/c1.png" alt="instagram" style="display:none;visibility:hidden;"><noscript><img src="assets/img/cleander/c1.png" alt="instagram"></noscript>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img data-cfsrc="/assets/img/cleander/c4.png" alt="instagram" style="display:none;visibility:hidden;"><noscript><img src="assets/img/cleander/c2.png" alt="instagram"></noscript>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img data-cfsrc="/assets/img/cleander/c5.png" alt="instagram" style="display:none;visibility:hidden;"><noscript><img src="assets/img/cleander/c3.png" alt="instagram"></noscript>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img data-cfsrc="/assets/img/cleander/c6.png" alt="instagram" style="display:none;visibility:hidden;"><noscript><img src="assets/img/cleander/c3.png" alt="instagram"></noscript>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img data-cfsrc="/assets/img/cleander/c7.png" alt="instagram" style="display:none;visibility:hidden;"><noscript><img src="assets/img/cleander/c2.png" alt="instagram"></noscript>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img data-cfsrc="/assets/img/cleander/c8.png" alt="instagram" style="display:none;visibility:hidden;"><noscript><img src="assets/img/cleander/c1.png" alt="instagram"></noscript>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="footer_box">
+                    <div class="footer_header">
+                        <h4 class="footer_title">
+                            Dudas, Contactenos
+                        </h4>
+                    </div>
+                    <div class="footer_box_body">
+                        <div class="newsletter_form">
+                            <input type="email" class="form-control" placeholder="E-Mail">
+                            <input type="email" class="form-control" placeholder="Comentario">
+                            <button class="btn btn-rounded btn-block btn-primary">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copyright_footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-12">
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+            <div class="col-12 col-md-6 ">
+                <ul class="footer_menu">
+                    <li>
+                        <a href="">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="">Sobre El Evento</a>
+                    </li>
+                    <li>
+                        <a href="">Ejes Temáticos</a>
+                    </li>
+                    <li>
+                        <a href="">Hoteles</a>
+                    </li>
+                    <li>
+                        <a href="">Cronograma</a>
+                    </li>
+                    <li>
+                        <a href="">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer end -->
+
+<!-- jquery -->
+<script src="/assets/js/jquery.min.js"></script>
+<!--Animated scroll -->
+<script src="/js/animatescroll.min.js"></script>
+<!-- bootstrap -->
+<script src="/assets/js/popper.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/waypoints.min.js"></script>
+<!--slick carousel -->
+<script src="/assets/js/owl.carousel.min.js"></script>
+<!--parallax -->
+<script src="/assets/js/parallax.min.js"></script>
+<!--Counter up -->
+<script src="/assets/js/jquery.counterup.min.js"></script>
+<!--Counter down -->
+<script src="/assets/js/jquery.countdown.min.js"></script>
+<!-- WOW JS -->
+<script src="/assets/js/wow.min.js"></script>
+<!-- Custom js -->
+<script src="/assets/js/main.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+</script>
+<!-- Logic System -->
+<script type="text/javascript">
+$(document).ready(() => {
+  document.location.href.match(/#\w+/g)
+  console.log(document.location.href.match(/#\w+/g));
+  if (document.location.href.match(/programa/g) != null) {
+    $("#headernav ul li a").click((e) => {
+      if (e.target.href.match(/LISTADO/g) != null) {
+        return;
+      } else if (e.target.href.match(/programa/g) != null) {
+      } else {
+        console.log("ENTER GERE")
+        document.location.href = "/"
+        //e.preventDefault();
+        //$($(this).attr("section")).animatescroll({scrollSpeed:1000, padding:120});
+      }
+    })
+  } else {
+    $("#headernav ul li a").click(function (e) {
+      if (e.target.href.match(/LISTADO/g) != null) {
+        return;
+      } else if (e.target.href.match(/programa/g) != null) {
+      } else {
+        e.preventDefault();
+        $($(this).attr("section")).animatescroll({scrollSpeed:1000, padding:120});
+      }
+    });
+  }
+  $("#btn_inscribete").click(function (e) {
+    e.preventDefault();
+    $($(this).attr("section")).animatescroll({scrollSpeed:1000, padding:120});
+  });
+});
+</script>
+</body>
+</html>

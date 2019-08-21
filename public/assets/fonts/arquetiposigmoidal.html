@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="examples.css">
+	<script src="Tanglekit/js/jquery-2.1.1.js"></script>
+	<script src="Tanglekit/js/Tangle.js"></script>
+	<script src="Tanglekit/js/Plot.js"></script>
+	<script src="Tanglekit/js/Chart.min.js"></script>
+	<script src="Tanglekit/js/jquery.flot.js"></script>
+	<!-- TangleKit -->
+    <link rel="stylesheet" href="TangleKit/TangleKit.css" type="text/css">
+     <script type="text/javascript" src="TangleKit/mootools.js"></script>
+    <script type="text/javascript" src="TangleKit/sprintf.js"></script>
+    <script type="text/javascript" src="TangleKit/BVTouchable.js"></script>
+    <script type="text/javascript" src="TangleKit/TangleKit.js"></script>
+	<script>
+		jQuery(document).ready(function($) {
+			var model = {
+				initialize:function()
+				{
+					this.tiempo = 180;
+					this.step = 0.5;
+					this.v0 = 450;
+					this.desaceleracion = 2.5;
+					this.velocidadfinal = 0;
+					//suposición.
+					this.altura0 = 40500;
+				},
+				update:function()
+				{
+					this.points1 = [];
+					this.points2 = [];
+					this.v = this.v0;
+					this.altura = this.altura0;
+					for (var t = 0; t < this.tiempo; t += this.step) {
+						this.points1.push([t, this.altura]);
+						this.points2.push([t, this.v]);
+						this.altura += (-this.v) * this.step;
+						this.v += (-this.desaceleracion) * this.step;
+
+
+					}
+					$("#r").html(this.altura);
+					var options = {
+						color:"#ffffff",
+					    series: {
+					        lines: { show: true },
+					        points: { show: false }
+					    },
+					    legend:{
+					    	show: true,
+					    	position:"ne"
+					    }
+					};
+					$.plot("#canvas1", [{data : this.points2, label: "Velocidad"}], options);
+					$.plot("#canvas2", [{data : this.points1, label:"Altura"}], options);
+
+				}
+			};
+			var elemento=document.getElementById("visual");
+			new Tangle(elemento,model)
+		});
+	</script>
+</head>
+<body>
+	<div id="visual">
+	Tiempo = <span data-var="tiempo" class="TKAdjustableNumber" data-min="0" data-max="300" data-step="1"></span>
+	altura  = <span data-var="altura0" class="TKAdjustableNumber" data-min="1000" data-max="55000" data-step="10"></span>
+	k = <span data-var="k" class="TKAdjustableNumber" data-min="1" data-max="100" data-step="1"></span>
+	b = <span data-var="b" class="TKAdjustableNumber" data-min="1" data-max="100" data-step="1"></span>
+	Step = <span data-var="step" class="TKAdjustableNumber" data-min="0.05" data-max="1" data-step="0.05"></span>
+
+	</div>
+	</div>
+	<div id = "r">
+		4631 lts.
+	</div>
+	<div>
+		4631 lts.
+	</div>
+	<table>
+		<tr>
+			<td>
+				<div id="canvas1"></div>
+			</td>
+			<td>
+<div id="canvas2"></div>
+			</td>
+		</tr>
+	</table>
+<ul id="graficas">
+			<li>
+
+			</li>
+			<li>
+
+			</li>
+		</ul>
+
+
+</body>
+</html>
